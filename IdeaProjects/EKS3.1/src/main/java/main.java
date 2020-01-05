@@ -28,11 +28,7 @@ public class main {
             basisklassen.start();
             impl1.start();
             impl2.start();
-            // Setze den Service für impl2
-
             anwendung.start();
-
-
 
         }catch(Exception exception){
             System.err.println("Error while executing program: " + exception);
