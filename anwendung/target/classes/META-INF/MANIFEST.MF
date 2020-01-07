@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1578244209873
+Build-Jdk: 1.8.0_171
+Built-By: Z
+Bundle-Activator: de.thkoeln.eksa.osgi.anwendung.AwendungActivator
+Bundle-ManifestVersion: 2
+Bundle-Name: anwendung
+Bundle-SymbolicName: de.thkoeln.eksa.osgi.anwendung
+Bundle-Version: 1.0.0
+Created-By: Apache Maven Bundle Plugin
+Import-Package: org.osgi.framework;version="[1.8,2)",de.thkoeln.eksa.osg
+ i.impl2;version="[1.0,2)",de.thkoeln.eksa.osgi.verwaltung;version="[1.0
+ ,2)",de.thkoeln.eksa.osgi.entitaetsklassen;version="[1.0,2)",org.osgi.u
+ til.tracker;version="[1.5,2)",de.thkoeln.eksa.osgi.impl1;version="[1.0,
+ 2)"
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Tool: Bnd-4.2.0.201903051501

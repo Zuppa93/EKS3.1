@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <artifactId>EKS3.1</artifactId>
+        <groupId>de.thkoeln.eksa.osgi</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>impl2</artifactId>
+
+    <packaging>bundle</packaging>
+    <version>1.0</version>
+    <!-- Ende(1) -->
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+    </properties>
+
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.osgi/org.osgi.core -->
+        <dependency>
+            <groupId>org.osgi</groupId>
+            <artifactId>org.osgi.core</artifactId>
+            <version>6.0.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>de.thkoeln.eksa.osgi</groupId>
+            <artifactId>basisklassen</artifactId>
+            <version>1.0</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>de.thkoeln.eksa.osgi</groupId>
+            <artifactId>impl1</artifactId>
+            <version>1.0</version>
+        </dependency>
+    </dependencies>
+
+    <!-- Start(2)-->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <extensions>true</extensions>
+                <configuration>
+                    <instructions>
+                        <Import-Package>
+                            org.osgi.framework,
+                            de.thkoeln.eksa.osgi.verwaltung,
+                            de.thkoeln.eksa.osgi.entityverwaltung,
+                            de.thkoeln.eksa.osgi.entitaetsklassen,
+                            de.thkoeln.eksa.osgi.sonstigedienste,
+                            de.thkoeln.eksa.osgi.impl1
+                        </Import-Package>
+                        <Export-Package>de.thkoeln.eksa.osgi.impl2</Export-Package>
+                        <Bundle-Activator>de.thkoeln.eksa.osgi.impl2.Impl2Activator</Bundle-Activator>
+                    </instructions>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <!-- Ende(2)-->
+
+    
+</project>
