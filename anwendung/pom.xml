@@ -32,21 +32,11 @@
             <version>6.0.0</version>
             <scope>provided</scope>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.felix/org.apache.felix.framework -->
         <dependency>
-            <groupId>de.thkoeln.eksa.osgi</groupId>
-            <artifactId>basisklassen</artifactId>
-            <version>1.0</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>de.thkoeln.eksa.osgi</groupId>
-            <artifactId>impl1</artifactId>
-            <version>1.0</version>
-        </dependency>
-        <dependency>
-            <groupId>de.thkoeln.eksa.osgi</groupId>
-            <artifactId>impl2</artifactId>
-            <version>1.0</version>
+            <groupId>org.apache.felix</groupId>
+            <artifactId>org.apache.felix.framework</artifactId>
+            <version>6.0.0</version>
         </dependency>
     </dependencies>
     <!-- Start(2)-->
@@ -59,11 +49,8 @@
                 <configuration>
                     <instructions>
                         <Import-Package>
-                            org.osgi.framework,org.osgi.util.tracker,
-                            de.thkoeln.eksa.osgi.impl1,
-                            de.thkoeln.eksa.osgi.impl2,
-                            de.thkoeln.eksa.osgi.verwaltung,
-                            de.thkoeln.eksa.osgi.entitaetsklassen
+                            org.osgi.framework,
+                            org.osgi.util.tracker
                         </Import-Package>
                         <Export-Package></Export-Package>
                         <!--<Export-Package>de.thkoeln.eksa.osgi.anwendung</Export-Package>-->

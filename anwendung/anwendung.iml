@@ -4,7 +4,7 @@
     <facet type="Osmorc" name="OSGi">
       <configuration manifestGenerationMode="OsmorcControlled" manifestLocation="" jarfileLocation="anwendung-1.0.jar" outputPathType="CompilerOutputPath" bndFileLocation="" bundlorFileLocation="" bundleActivator="de.thkoeln.eksa.osgi.anwendung.AwendungActivator" bundleSymbolicName="de.thkoeln.eksa.osgi.anwendung" bundleVersion="1.0.0" ignoreFilePattern="" useProjectDefaultManifestFileLocation="true" alwaysRebuildBundleJAR="false" doNotSynchronizeWithMaven="false">
         <additionalProperties>
-          <property key="Import-Package" value="org.osgi.framework,org.osgi.util.tracker,de.thkoeln.eksa.osgi.impl1,de.thkoeln.eksa.osgi.impl2,de.thkoeln.eksa.osgi.verwaltung,de.thkoeln.eksa.osgi.entitaetsklassen" />
+          <property key="Import-Package" value="org.osgi.framework,org.osgi.util.tracker" />
           <property key="Bundle-Name" value="anwendung" />
         </additionalProperties>
         <additionalJARContents />
@@ -21,9 +21,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.osgi:org.osgi.core:6.0.0" level="project" />
-    <orderEntry type="module" module-name="basisklassen" />
-    <orderEntry type="module" module-name="impl1" />
-    <orderEntry type="module" module-name="impl2" />
     <orderEntry type="library" name="Maven: org.apache.felix:org.apache.felix.framework:6.0.0" level="project" />
     <orderEntry type="library" name="Maven: org.codehaus.mojo:animal-sniffer-annotations:1.9" level="project" />
     <orderEntry type="library" name="Maven: org.apache.maven.plugins:maven-compiler-plugin:3.8.0" level="project" />
