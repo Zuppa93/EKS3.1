@@ -1,16 +1,16 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1578244209326
-Build-Jdk: 1.8.0_171
-Built-By: Z
+Bnd-LastModified: 1578477165647
+Build-Jdk: 1.8.0_232
+Built-By: root
 Bundle-Activator: de.thkoeln.eksa.osgi.impl2.Impl2Activator
 Bundle-ManifestVersion: 2
 Bundle-Name: impl2
 Bundle-SymbolicName: de.thkoeln.eksa.osgi.impl2
 Bundle-Version: 1.0.0
 Created-By: Apache Maven Bundle Plugin
-Export-Package: de.thkoeln.eksa.osgi.impl2;uses:="de.thkoeln.eksa.osgi.e
- ntitaetsklassen,de.thkoeln.eksa.osgi.verwaltung,org.osgi.framework";ver
- sion="1.0.0"
+Export-Package: de.thkoeln.eksa.osgi.impl2;version="1.0.0";uses:="de.thk
+ oeln.eksa.osgi.entitaetsklassen,de.thkoeln.eksa.osgi.verwaltung,org.osg
+ i.framework"
 Import-Package: org.osgi.framework;version="[1.8,2)",de.thkoeln.eksa.osg
  i.verwaltung;version="[1.0,2)",de.thkoeln.eksa.osgi.entityverwaltung;ve
  rsion="[1.0,2)",de.thkoeln.eksa.osgi.entitaetsklassen;version="[1.0,2)"

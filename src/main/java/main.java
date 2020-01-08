@@ -30,10 +30,17 @@ public class main {
             impl2.start();
             anwendung.start();
 
+            anwendung.stop();
+            impl2.stop();
+            impl1.stop();
+            basisklassen.stop();
+
         }catch(Exception exception){
             System.err.println("Error while executing program: " + exception);
             exception.printStackTrace();
             System.exit(0);
         }
+
+        System.exit(0);
     }
 }

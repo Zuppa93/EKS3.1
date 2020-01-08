@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1578244209873
-Build-Jdk: 1.8.0_171
-Built-By: Z
+Bnd-LastModified: 1578477165861
+Build-Jdk: 1.8.0_232
+Built-By: root
 Bundle-Activator: de.thkoeln.eksa.osgi.anwendung.AwendungActivator
 Bundle-ManifestVersion: 2
 Bundle-Name: anwendung

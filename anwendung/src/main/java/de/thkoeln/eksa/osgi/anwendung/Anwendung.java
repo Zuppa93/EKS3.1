@@ -42,7 +42,7 @@ public class Anwendung {
         }
 
         ArrayList<Konto> stephanskonten = kundeKontoVerwaltung.alleKonten(kundenObjekt2);
-        System.out.println("Alle gefundenen Konten von Tim:");
+        System.out.println("Alle gefundenen Konten von Stephan:");
         for(int i = 0;i<stephanskonten.size();i++){
             System.out.println(stephanskonten.get(i).getKontonr());
             System.out.println();

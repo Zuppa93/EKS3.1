@@ -1,17 +1,17 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1578244207640
-Build-Jdk: 1.8.0_171
-Built-By: Z
+Bnd-LastModified: 1578477164833
+Build-Jdk: 1.8.0_232
+Built-By: root
 Bundle-ManifestVersion: 2
 Bundle-Name: basisklassen
 Bundle-SymbolicName: de.thkoeln.eksa.osgi.basisklassen
 Bundle-Version: 1.0.0
 Created-By: Apache Maven Bundle Plugin
 Export-Package: de.thkoeln.eksa.osgi.entitaetsklassen;version="1.0.0",de
- .thkoeln.eksa.osgi.entityverwaltung;uses:="de.thkoeln.eksa.osgi.entitae
- tsklassen";version="1.0.0",de.thkoeln.eksa.osgi.sonstigedienste;version
- ="1.0.0",de.thkoeln.eksa.osgi.verwaltung;uses:="de.thkoeln.eksa.osgi.en
- titaetsklassen";version="1.0.0"
+ .thkoeln.eksa.osgi.entityverwaltung;version="1.0.0";uses:="de.thkoeln.e
+ ksa.osgi.entitaetsklassen",de.thkoeln.eksa.osgi.sonstigedienste;version
+ ="1.0.0",de.thkoeln.eksa.osgi.verwaltung;version="1.0.0";uses:="de.thko
+ eln.eksa.osgi.entitaetsklassen"
 Import-Package: org.osgi.framework;version="[1.8,2)",org.osgi.util.track
  er;version="[1.5,2)"
 Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"

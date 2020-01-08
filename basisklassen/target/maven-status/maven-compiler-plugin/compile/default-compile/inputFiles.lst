@@ -1,6 +1,6 @@
-C:\Users\Z\IdeaProjects\EKS3.1\basisklassen\src\main\java\de\thkoeln\eksa\osgi\entitaetsklassen\Kunde.java
-C:\Users\Z\IdeaProjects\EKS3.1\basisklassen\src\main\java\de\thkoeln\eksa\osgi\sonstigedienste\NummernSpeichern.java
-C:\Users\Z\IdeaProjects\EKS3.1\basisklassen\src\main\java\de\thkoeln\eksa\osgi\verwaltung\KundeKontoVerwaltung.java
-C:\Users\Z\IdeaProjects\EKS3.1\basisklassen\src\main\java\de\thkoeln\eksa\osgi\entitaetsklassen\Konto.java
-C:\Users\Z\IdeaProjects\EKS3.1\basisklassen\src\main\java\de\thkoeln\eksa\osgi\entityverwaltung\AlleKunden.java
-C:\Users\Z\IdeaProjects\EKS3.1\basisklassen\src\main\java\de\thkoeln\eksa\osgi\entityverwaltung\AlleKonten.java
+/home/z/Projects/EKS3.1/basisklassen/src/main/java/de/thkoeln/eksa/osgi/verwaltung/KundeKontoVerwaltung.java
+/home/z/Projects/EKS3.1/basisklassen/src/main/java/de/thkoeln/eksa/osgi/entityverwaltung/AlleKunden.java
+/home/z/Projects/EKS3.1/basisklassen/src/main/java/de/thkoeln/eksa/osgi/entitaetsklassen/Konto.java
+/home/z/Projects/EKS3.1/basisklassen/src/main/java/de/thkoeln/eksa/osgi/entityverwaltung/AlleKonten.java
+/home/z/Projects/EKS3.1/basisklassen/src/main/java/de/thkoeln/eksa/osgi/sonstigedienste/NummernSpeichern.java
+/home/z/Projects/EKS3.1/basisklassen/src/main/java/de/thkoeln/eksa/osgi/entitaetsklassen/Kunde.java
