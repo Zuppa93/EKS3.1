@@ -11,15 +11,16 @@ public class Anwendung {
 
     private KundeKontoVerwaltung kundeKontoVerwaltung;
 
-    public Anwendung(){
-
+    public Anwendung(){}
+    public Anwendung(KundeKontoVerwaltung verwaltung){
+        kundeKontoVerwaltung=verwaltung;
     }
 
     public void setService(){
 
     }
 
-    public void doIt() throws Exception{
+    public void doIt() {
 
         int kunde1 = kundeKontoVerwaltung.neuerKunde("Tim");
         System.out.println("Kunde Tim hat Kundennummer: " + kunde1);

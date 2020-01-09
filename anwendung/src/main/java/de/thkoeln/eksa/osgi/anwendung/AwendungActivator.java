@@ -2,37 +2,43 @@ package de.thkoeln.eksa.osgi.anwendung;
 
 
 import de.thkoeln.eksa.osgi.verwaltung.KundeKontoVerwaltung;
-import org.osgi.framework.BundleActivator;
-import org.osgi.framework.BundleContext;
-import org.osgi.framework.ServiceReference;
-import org.osgi.framework.ServiceRegistration;
+import org.osgi.framework.*;
 
 import java.util.Hashtable;
 
 public class AwendungActivator implements BundleActivator {
 
-    private ServiceRegistration anwendungService;
+    private ServiceRegistration<Anwendung> anwendungService;
 
-    private ServiceReference impl2Reference;
+    private ServiceReference<KundeKontoVerwaltung>[] impl2References;
 
     @Override
-    public void start(BundleContext bundleContext) throws Exception {
+    public void start(BundleContext bundleContext) {
         Hashtable<String,String> properties = new Hashtable<>();
 
-        anwendungService = bundleContext.registerService(Anwendung.class.getName(),new Anwendung(),properties);
         System.out.println("Bundle Anwendung wurd nun gestartet");
 
-        impl2Reference = bundleContext.getServiceReference(KundeKontoVerwaltung.class);
+        try {
+            impl2References = (ServiceReference<KundeKontoVerwaltung>[]) bundleContext.getServiceReferences(KundeKontoVerwaltung.class.getName(), "Implementation=KundeKontoVerwaltung");
+        } catch (InvalidSyntaxException e) {
+            e.printStackTrace();
+            return;
+        }
+        if(impl2References == null) {
+            System.out.println("No Services available for KundeKontoVerwaltung. Ending Program.");
+            return;
+        }
+        KundeKontoVerwaltung verwaltung = (KundeKontoVerwaltung) bundleContext.getService(impl2References[0]);
+
+        anwendungService = (ServiceRegistration<Anwendung>) bundleContext.registerService(Anwendung.class.getName(),new Anwendung(),properties);
 
 
-
-        Anwendung anwendung = new Anwendung();
+        Anwendung anwendung = new Anwendung(verwaltung);
         anwendung.doIt();
-
     }
 
     @Override
-    public void stop(BundleContext bundleContext) throws Exception {
+    public void stop(BundleContext bundleContext) {
 
         anwendungService.unregister();
         System.out.println("Bundle Anwendung wird nun beendet");
