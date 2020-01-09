@@ -2,6 +2,7 @@ package de.thkoeln.eksa.osgi.verwaltung;
 
 import de.thkoeln.eksa.osgi.entitaetsklassen.Konto;
 import de.thkoeln.eksa.osgi.entitaetsklassen.Kunde;
+import de.thkoeln.eksa.osgi.sonstigedienste.NummernSpeichern;
 
 import java.util.ArrayList;
 
@@ -52,5 +53,7 @@ public interface KundeKontoVerwaltung {
      * @return vergebene Kontonummer
      */
     public int neuesKonto();
+
+    public void setMyService(NummernSpeichern service);
 
   }

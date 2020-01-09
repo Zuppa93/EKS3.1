@@ -17,12 +17,31 @@ public class Impl2Activator implements BundleActivator {
 
     @Override
     public void start(BundleContext bundleContext) throws Exception {
-        Hashtable<String, String> properties = new Hashtable<String, String>();
-        properties.put("Implementation", "KundeKontoVerwaltung");
 
-        impl2Service = bundleContext.registerService(KundeKontoVerwaltung.class.getName(), new KundeKontoVerwaltungImpl(), properties);
+        ServiceReference[] refs = bundleContext.getServiceReferences(NummernSpeichern.class.getName(),"(Implementation=NummernSpeichern)");
+
+        if(refs==null){
+            System.out.println("ERROR 404");
+            return;
+        }
+
+        NummernSpeichern nummernSpeichern = (NummernSpeichern) bundleContext.getService(refs[0]);
 
         KundeKontoVerwaltungImpl kundeKontoVerwaltung = new KundeKontoVerwaltungImpl();
+
+        kundeKontoVerwaltung.setMyService(nummernSpeichern);
+
+        Hashtable<String, String> properties = new Hashtable<String, String>();
+        properties.put("Implementation", "KundeKontoVerwaltung");
+        KundeKontoVerwaltung instance = new KundeKontoVerwaltungImpl();
+        instance.setMyService(nummernSpeichern);
+        /*
+        Objekt welches wir bei registerService übergeben wird bei getService zurückgegeben
+        Sodass wir eine Referenz des hier erstellten Objektes erhalten und darauf arbeiten
+        Das heisst wenn wir hier den Service setzen ist er immer gesetzt wenn wir uns den
+        Service holen
+         */
+        impl2Service = bundleContext.registerService(KundeKontoVerwaltung.class.getName(), instance, properties);
 
         System.out.println("Bundle impl2 wurde gestartet");
     }

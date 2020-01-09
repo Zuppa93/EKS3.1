@@ -57,7 +57,8 @@
                             org.osgi.framework,
                             org.osgi.util.tracker,
                             de.thkoeln.eksa.osgi.sonstigedienste,
-                            de.thkoeln.eksa.osgi.verwaltung
+                            de.thkoeln.eksa.osgi.verwaltung,
+                            de.thkoeln.eksa.osgi.entitaetsklassen
                         </Import-Package>
                         <Export-Package></Export-Package>
                         <!--<Export-Package>de.thkoeln.eksa.osgi.anwendung</Export-Package>-->

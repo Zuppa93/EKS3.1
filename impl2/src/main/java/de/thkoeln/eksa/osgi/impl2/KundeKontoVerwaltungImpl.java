@@ -21,6 +21,7 @@ public class KundeKontoVerwaltungImpl implements KundeKontoVerwaltung{
         alleKonten = AlleKonten.getInstance();
     }
 
+    @Override
     public void setMyService(NummernSpeichern newService){
         this.myService = newService;
         if(myService == null)

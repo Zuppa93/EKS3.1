@@ -1,6 +1,7 @@
 package de.thkoeln.eksa.osgi.anwendung;
 
 
+import de.thkoeln.eksa.osgi.sonstigedienste.NummernSpeichern;
 import de.thkoeln.eksa.osgi.verwaltung.KundeKontoVerwaltung;
 import org.osgi.framework.*;
 
@@ -12,14 +13,15 @@ public class AwendungActivator implements BundleActivator {
 
     private ServiceReference<KundeKontoVerwaltung>[] impl2References;
 
+    private ServiceReference<NummernSpeichern>[] impl1Reference;
+
     @Override
     public void start(BundleContext bundleContext) {
-        Hashtable<String,String> properties = new Hashtable<>();
 
         System.out.println("Bundle Anwendung wurd nun gestartet");
 
         try {
-            impl2References = (ServiceReference<KundeKontoVerwaltung>[]) bundleContext.getServiceReferences(KundeKontoVerwaltung.class.getName(), "Implementation=KundeKontoVerwaltung");
+            impl2References = (ServiceReference<KundeKontoVerwaltung>[]) bundleContext.getServiceReferences(KundeKontoVerwaltung.class.getName(), "(Implementation=KundeKontoVerwaltung)");
         } catch (InvalidSyntaxException e) {
             e.printStackTrace();
             return;
@@ -28,12 +30,20 @@ public class AwendungActivator implements BundleActivator {
             System.out.println("No Services available for KundeKontoVerwaltung. Ending Program.");
             return;
         }
-        KundeKontoVerwaltung verwaltung = (KundeKontoVerwaltung) bundleContext.getService(impl2References[0]);
 
+        try{
+            impl1Reference = (ServiceReference<NummernSpeichern>[]) bundleContext.getServiceReferences(NummernSpeichern.class.getName(),"(Implementation=NummernSpeichern)");
+        }catch(InvalidSyntaxException e){
+            e.printStackTrace();
+            return;
+        }
+
+        KundeKontoVerwaltung verwaltung = (KundeKontoVerwaltung) bundleContext.getService(impl2References[0]);
+        Anwendung anwendung = new Anwendung(verwaltung);
+
+        Hashtable<String,String> properties = new Hashtable<>();
         anwendungService = (ServiceRegistration<Anwendung>) bundleContext.registerService(Anwendung.class.getName(),new Anwendung(),properties);
 
-
-        Anwendung anwendung = new Anwendung(verwaltung);
         anwendung.doIt();
     }
 

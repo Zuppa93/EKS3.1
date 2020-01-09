@@ -4,7 +4,7 @@
     <facet type="Osmorc" name="OSGi">
       <configuration manifestGenerationMode="OsmorcControlled" manifestLocation="" jarfileLocation="anwendung-1.0.jar" outputPathType="CompilerOutputPath" bndFileLocation="" bundlorFileLocation="" bundleActivator="de.thkoeln.eksa.osgi.anwendung.AwendungActivator" bundleSymbolicName="de.thkoeln.eksa.osgi.anwendung" bundleVersion="1.0.0" ignoreFilePattern="" useProjectDefaultManifestFileLocation="true" alwaysRebuildBundleJAR="false" doNotSynchronizeWithMaven="false">
         <additionalProperties>
-          <property key="Import-Package" value="org.osgi.framework,org.osgi.util.tracker,de.thkoeln.eksa.osgi.sonstigedienste,de.thkoeln.eksa.osgi.verwaltung" />
+          <property key="Import-Package" value="org.osgi.framework,org.osgi.util.tracker,de.thkoeln.eksa.osgi.sonstigedienste,de.thkoeln.eksa.osgi.verwaltung,de.thkoeln.eksa.osgi.entitaetsklassen" />
           <property key="Bundle-Name" value="anwendung" />
         </additionalProperties>
         <additionalJARContents />
