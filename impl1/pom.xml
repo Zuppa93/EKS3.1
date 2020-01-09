@@ -30,6 +30,11 @@
             <version>6.0.0</version>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>de.thkoeln.eksa.osgi</groupId>
+            <artifactId>basisklassen</artifactId>
+            <version>1.0</version>
+        </dependency>
     </dependencies>
     <!-- Start(2)-->
     <build>
@@ -41,7 +46,8 @@
                 <configuration>
                     <instructions>
                         <Import-Package>
-                            org.osgi.framework
+                            org.osgi.framework,
+                            de.thkoeln.eksa.osgi.sonstigedienste
                         </Import-Package>
                         <Export-Package>de.thkoeln.eksa.osgi.impl1</Export-Package>-
                         <!--<Bundle-Activator>de.thkoeln.eksa.osgi.impl1.ActivatorImpl1</Bundle-Activator>-->

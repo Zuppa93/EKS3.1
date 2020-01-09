@@ -52,4 +52,5 @@ public interface KundeKontoVerwaltung {
      * @return vergebene Kontonummer
      */
     public int neuesKonto();
-}
+
+  }

@@ -4,7 +4,6 @@ import de.thkoeln.eksa.osgi.entitaetsklassen.Konto;
 import de.thkoeln.eksa.osgi.entitaetsklassen.Kunde;
 import de.thkoeln.eksa.osgi.entityverwaltung.AlleKonten;
 import de.thkoeln.eksa.osgi.entityverwaltung.AlleKunden;
-import de.thkoeln.eksa.osgi.impl1.NummernSpeichernImpl;
 import de.thkoeln.eksa.osgi.sonstigedienste.NummernSpeichern;
 import de.thkoeln.eksa.osgi.verwaltung.KundeKontoVerwaltung;
 
@@ -15,21 +14,21 @@ public class KundeKontoVerwaltungImpl implements KundeKontoVerwaltung{
     private AlleKunden alleKunden;
     private AlleKonten alleKonten;
 
-    private NummernSpeichern myService = NummernSpeichernImpl.getInstance();
+    private NummernSpeichern myService;
 
     public KundeKontoVerwaltungImpl(){
         alleKunden = AlleKunden.getInstance();
         alleKonten = AlleKonten.getInstance();
     }
-/*
+
     public void setMyService(NummernSpeichern newService){
-        myService = newService;
+        this.myService = newService;
         if(myService == null)
             System.out.println("Service nicht mehr registriert");
         else
             System.out.println("Service "+myService.getClass().getName()+" registriert");
     }
-*/
+
     /**
      * Erzeugt ein neues Objekt der Klasse Kunde.
      * Hierbei muss auf das Interface NummernSpeicher
@@ -121,4 +120,5 @@ public class KundeKontoVerwaltungImpl implements KundeKontoVerwaltung{
         alleKonten.addKonto(konto);
         return konto.getKontonr();
     }
+
 }

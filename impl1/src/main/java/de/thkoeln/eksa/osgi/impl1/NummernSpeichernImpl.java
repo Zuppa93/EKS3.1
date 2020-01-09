@@ -1,6 +1,6 @@
 package de.thkoeln.eksa.osgi.impl1;
 
-import de.thkoeln.eksa.osgi.entityverwaltung.AlleKunden;
+// import de.thkoeln.eksa.osgi.entityverwaltung.AlleKunden;
 import de.thkoeln.eksa.osgi.sonstigedienste.NummernSpeichern;
 
 public class NummernSpeichernImpl implements NummernSpeichern {

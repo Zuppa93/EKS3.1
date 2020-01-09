@@ -38,6 +38,11 @@
             <artifactId>org.apache.felix.framework</artifactId>
             <version>6.0.0</version>
         </dependency>
+        <dependency>
+            <groupId>de.thkoeln.eksa.osgi</groupId>
+            <artifactId>basisklassen</artifactId>
+            <version>1.0</version>
+        </dependency>
     </dependencies>
     <!-- Start(2)-->
     <build>
@@ -50,7 +55,9 @@
                     <instructions>
                         <Import-Package>
                             org.osgi.framework,
-                            org.osgi.util.tracker
+                            org.osgi.util.tracker,
+                            de.thkoeln.eksa.osgi.sonstigedienste,
+                            de.thkoeln.eksa.osgi.verwaltung
                         </Import-Package>
                         <Export-Package></Export-Package>
                         <!--<Export-Package>de.thkoeln.eksa.osgi.anwendung</Export-Package>-->

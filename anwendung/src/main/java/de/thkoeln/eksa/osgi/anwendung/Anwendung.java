@@ -2,26 +2,24 @@ package de.thkoeln.eksa.osgi.anwendung;
 
 import de.thkoeln.eksa.osgi.entitaetsklassen.Konto;
 import de.thkoeln.eksa.osgi.entitaetsklassen.Kunde;
-import de.thkoeln.eksa.osgi.impl2.KundeKontoVerwaltungImpl;
+
 import de.thkoeln.eksa.osgi.verwaltung.KundeKontoVerwaltung;
-import org.apache.felix.framework.Felix;
-import org.osgi.framework.Constants;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 
 public class Anwendung {
 
+    private KundeKontoVerwaltung kundeKontoVerwaltung;
+
+    public Anwendung(){
+
+    }
+
+    public void setService(){
+
+    }
+
     public void doIt() throws Exception{
-
-        // Initialize Apache Felix Framework
-        Map<String, String> configMap = new HashMap<String, String>();
-        configMap.put(Constants.FRAMEWORK_STORAGE_CLEAN, "onFirstInit");
-        Felix framework = new Felix(configMap);
-        framework.init();
-
-        KundeKontoVerwaltung kundeKontoVerwaltung = new KundeKontoVerwaltungImpl();
 
         int kunde1 = kundeKontoVerwaltung.neuerKunde("Tim");
         System.out.println("Kunde Tim hat Kundennummer: " + kunde1);
