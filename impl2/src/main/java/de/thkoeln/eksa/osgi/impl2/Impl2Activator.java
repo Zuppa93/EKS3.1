@@ -18,7 +18,7 @@ public class Impl2Activator implements BundleActivator {
     @Override
     public void start(BundleContext bundleContext) throws Exception {
         Hashtable<String, String> properties = new Hashtable<String, String>();
-        properties.put("Implementation", "impl2");
+        properties.put("Implementation", "KundeKontoVerwaltung");
 
         impl2Service = bundleContext.registerService(KundeKontoVerwaltung.class.getName(), new KundeKontoVerwaltungImpl(), properties);
 
